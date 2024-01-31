@@ -13,7 +13,7 @@ pipeline {
         stage('Build docker image'){
             steps{
                 script{
-                    sh 'docker buildx build -t vickygaikwad41996/mydockerimages:yg .'
+                    sh 'docker buildx build -t vickygaikwad41996/mydockerimages .'
                 }
             }
         }
@@ -24,7 +24,7 @@ pipeline {
                    sh 'docker login -u vickygaikwad41996@gmail.com -p ${shubham.g}'
 
 }
-                   sh 'docker push vickygaikwad41996/devops-integration'
+                   sh 'docker push vickygaikwad41996/mydockerimages'
                 }
             }
         }
