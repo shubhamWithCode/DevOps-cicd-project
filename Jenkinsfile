@@ -21,7 +21,7 @@ pipeline {
             steps{
                 script{
                    withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhubpwd')]) {
-                   sh 'docker login -u vickygaikwad41996 -p ${shubham.g}'
+                   sh 'docker login -u vickygaikwad41996@gmail.com -p ${shubham.g}'
 
 }
                    sh 'docker push vickygaikwad41996/mydockerimages'
