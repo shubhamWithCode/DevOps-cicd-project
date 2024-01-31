@@ -24,7 +24,7 @@ pipeline {
                    sh 'docker login -u vickygaikwad41996@gmail.com -p ${shubham.g}'
 
 }
-                   sh 'docker push avickygaikwad41996/devops-integration'
+                   sh 'docker push vickygaikwad41996/devops-integration'
                 }
             }
         }
