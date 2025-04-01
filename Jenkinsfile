@@ -7,7 +7,8 @@ pipeline {
         stage('Build Maven'){
             steps{
                 git 'https://github.com/shubhamWithCode/DevOps-cicd-project.git'
-                sh 'mvn clean install'
+                sh 'mvn clean install' //compile the java src code,run tests if any, Package the compiled code, resources, and dependencies into a single JAR file 
+                //the jar file will be stored in target/devops-integration.jar. you can exxecute this file by ("java" "-jar" "target/devops-integration.jar")
             }
         }
         stage('Build docker image'){
