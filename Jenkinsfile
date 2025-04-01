@@ -25,8 +25,8 @@ pipeline {
                 script{
                    withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhubpwd')]) {
                    sh 'docker login -u vickygaikwad41996@gmail.com -p ${dockerhubpwd}'
-
-}
+                    //this will log into the docker hub account for pushing the image
+        }
                    sh 'docker push vickygaikwad41996/mydockerimages'
                 }
             }
@@ -35,6 +35,7 @@ pipeline {
             steps{
                 script{
                     sh 'aws eks update-kubeconfig --region ap-south-1 --name nike-cluster'
+                    //this will configure the eks cluster from the server do you can do deployment 
                 }
             }
         }
@@ -42,6 +43,7 @@ pipeline {
             steps{
                 script{
                     sh 'kubectl apply -f deploymentservice.yaml'
+                    //this will run deployment file
                 }
             }
         }
