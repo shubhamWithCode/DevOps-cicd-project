@@ -15,7 +15,8 @@ pipeline {
         stage('Build docker image'){
             steps{
                 script{
-                    sh 'docker buildx build -t vickygaikwad41996/mydockerimages .'
+                    sh 'docker buildx build -t vickygaikwad41996/mydockerimages .' 
+                    // this will create docker image of name vickygaikwad41996/mydockerimages by executing docker file 
                 }
             }
         }
