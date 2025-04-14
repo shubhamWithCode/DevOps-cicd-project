@@ -34,7 +34,7 @@ pipeline {
         stage('EKS and Kubectl configuration'){
             steps{
                 script{
-                    sh 'aws eks update-kubeconfig --region ap-south-1 --name nike-cluster'
+                    sh 'aws eks update-kubeconfig --region us-east-1 --name nike-main-cluster'
                     //this will configure the eks cluster from the server do you can do deployment 
                 }
             }
